@@ -1,14 +1,14 @@
 import app from "./app";
 import { connectDB } from "./db";
+import { SERVER_PORT } from "./config";
 
-const port = 3002
 
 function serverUp (){
     try{
     connectDB()
 
-    app.listen(port)
-    console.log('Application run for the port:'+port)
+    app.listen(SERVER_PORT)
+    console.log(`Application run for the port: ${SERVER_PORT}`)
     }
     catch(error){
         console.log(error)
